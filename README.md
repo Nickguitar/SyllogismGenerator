@@ -23,3 +23,7 @@ You can change the value of the variables from line 25 to 33 as you want.
 Lines 31, 32 and 33 contains the major, middle and minor terms.
 
 But notice that variables from line 25 to 29 have a constant logical meaning. If you want to change them, just translate them into your language. Don't change anything else or you may break something.
+
+I didn't worry about making the code optimized or the page beautiful, this is just a test
+
+![Image](https://i.imgur.com/sdykyfM.png)
