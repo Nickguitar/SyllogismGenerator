@@ -28,9 +28,9 @@ $nenhum  = "Nenhum"; // Translate this to "No"
 $e = "é"; 			 // Translate this to "is"
 $n_e = "não é"; 	 // Translate this to "is not"
 
-$P = "Foda"; // termo maior (major term)
-$M = "Inchado"; // termo médio (middle term)
-$S = "Belli"; // termo menor (minor term)
+$P = "P"; // termo maior (major term)
+$M = "M"; // termo médio (middle term)
+$S = "S"; // termo menor (minor term)
 
 # =================================================================
 
@@ -51,6 +51,7 @@ function modos($n=3, $forma = array('A','E','I','O')) { // gera todos os modos p
 }
 
 function check($modo){ // verifica se o modo das proposiçoes é A, E, I ou O e se tem 3 proposiçoes
+	//desnecessário se não for receber dados do usuário
 	$forma = array('A','E','I','O');
 	if(strlen($modo) !== 3){
 		die("Erro no modo do silogismo.");
@@ -250,16 +251,16 @@ function figura3($modo){ 	//por exemplo AEE
 	
 		switch($modo[1]){
 		case "A": // Todo A é B
-			array_push($silog, $todo." ".$M." ".$e." ".$M);
+			array_push($silog, $todo." ".$M." ".$e." ".$S);
 			break;
 		case "E": // Nenhum A é B
-			array_push($silog, $nenhum." ".$M." ".$e." ".$M);
+			array_push($silog, $nenhum." ".$M." ".$e." ".$S);
 			break;
 		case "I": // Algum A é B
-			array_push($silog, $algum." ".$M." ".$e." ".$M);
+			array_push($silog, $algum." ".$M." ".$e." ".$S);
 			break;
 		case "O": // Algum A não é B
-			array_push($silog, $algum." ".$M." ".$n_e." ".$M);
+			array_push($silog, $algum." ".$M." ".$n_e." ".$S);
 			break;
 	}
 	
@@ -324,16 +325,16 @@ function figura4($modo){ 	//por exemplo AEE
 	
 		switch($modo[1]){
 		case "A": // Todo A é B
-			array_push($silog, $todo." ".$M." ".$e." ".$M);
+			array_push($silog, $todo." ".$M." ".$e." ".$S);
 			break;
 		case "E": // Nenhum A é B
-			array_push($silog, $nenhum." ".$M." ".$e." ".$M);
+			array_push($silog, $nenhum." ".$M." ".$e." ".$S);
 			break;
 		case "I": // Algum A é B
-			array_push($silog, $algum." ".$M." ".$e." ".$M);
+			array_push($silog, $algum." ".$M." ".$e." ".$S);
 			break;
 		case "O": // Algum A não é B
-			array_push($silog, $algum." ".$M." ".$n_e." ".$M);
+			array_push($silog, $algum." ".$M." ".$n_e." ".$S);
 			break;
 	}
 	
